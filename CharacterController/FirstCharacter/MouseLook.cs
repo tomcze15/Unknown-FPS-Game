@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace CharacterController.FirstPerson
+namespace UnknownFPSGame.CharacterController.FirstPerson
 {
     public class MouseLook : MonoBehaviour
     {

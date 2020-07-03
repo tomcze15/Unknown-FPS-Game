@@ -6,7 +6,7 @@
 using System;
 using UnityEngine;
 
-namespace CharacterController.FirstPerson
+namespace UnknownFPSGame.CharacterController.FirstPerson
 {
     [RequireComponent(typeof(UnityEngine.CharacterController))]
     public class FirstCharacterController : MonoBehaviour
@@ -41,6 +41,7 @@ namespace CharacterController.FirstPerson
             public float GravityMultiplier;
             public float AngleSlope;
             public Vector3 Velocity;
+            public bool isShoot;
 
             public AdvancedSettings()
             {
@@ -52,8 +53,8 @@ namespace CharacterController.FirstPerson
 
         [SerializeField] UnityEngine.CharacterController CharacterController;
         
-        public MovementSettings             movementSettings = new MovementSettings();
-        [SerializeField] AdvancedSettings   advancedSettings = new AdvancedSettings();
+        public MovementSettings movementSettings = new MovementSettings();
+        public AdvancedSettings advancedSettings = new AdvancedSettings();
 
         [SerializeField] float      MaxGroundDetectionDistance  = 0f;
         [SerializeField] String     TurnOnSlopeByTag            = "";
@@ -71,6 +72,21 @@ namespace CharacterController.FirstPerson
             if (!CharacterController)
                 CharacterController = this.GetComponent<UnityEngine.CharacterController>();
         }
+
+
+
+        // Test ///////////////////////////
+
+        public Gun _gun;
+
+        private void Update()
+        {
+            if(advancedSettings.isShoot)
+            {
+                _gun.Shoot();
+            }
+        }
+        //////////////////////////////////
 
         private void FixedUpdate()
         {
@@ -156,6 +172,11 @@ namespace CharacterController.FirstPerson
 
         private float SlopeMultiplier()
             => movementSettings.SlopeCurveModifier.Evaluate(advancedSettings.AngleSlope);
+
+        private void Shoot()
+        { 
+
+        }
 
         private void OnDrawGizmosSelected()
         {

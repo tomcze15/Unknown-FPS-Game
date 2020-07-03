@@ -1,6 +1,6 @@
 ﻿using UnknownFPSGame.GeneralScripts;
 
-namespace ManagerInput
+namespace UnknownFPSGame.ManagerInput
 {
     public class VirtualInputManager : Singleton<VirtualInputManager>
     {
@@ -12,6 +12,7 @@ namespace ManagerInput
         public bool Jump;
         public bool TurnLeft;
         public bool TurnRight;
-        //public bool Any;
+        public bool Reload;
+        public bool Shoot;
     }
 }

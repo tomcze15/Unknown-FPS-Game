@@ -1,7 +1,7 @@
-﻿using ManagerInput;
+﻿using UnknownFPSGame.ManagerInput;
 using UnityEngine;
 
-namespace CharacterController.FirstPerson
+namespace UnknownFPSGame.CharacterController.FirstPerson
 {
     public class ManualInput : MonoBehaviour
     {
@@ -33,6 +33,9 @@ namespace CharacterController.FirstPerson
 
             if (VirtualInputManager.Instance.Run) CharacterController.movementSettings.Run = true;
             else CharacterController.movementSettings.Run = false;
+
+            if (VirtualInputManager.Instance.Shoot) CharacterController.advancedSettings.isShoot = true;
+            else CharacterController.advancedSettings.isShoot = false;
         }
     }
 }

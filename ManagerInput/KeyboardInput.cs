@@ -1,7 +1,7 @@
 ﻿//#define Debug
 using UnityEngine;
 
-namespace ManagerInput
+namespace UnknownFPSGame.ManagerInput
 {
     public class KeyboardInput : MonoBehaviour
     {
@@ -104,17 +104,29 @@ namespace ManagerInput
                 VirtualInputManager.Instance.Run = false;
             }
 
-//            if (Input.anyKey)
-//            {
-//                VirtualInputManager.Instance.Any = true;
-//#if Debug
-//                Debug.Log("Any.");
-//#endif
-//            }
-//            else
-//            {
-//                VirtualInputManager.Instance.Any = false;
-//            }
+            if (Input.GetKey(KeyCode.Mouse0) && Input.GetButton("Fire1"))
+            {
+                VirtualInputManager.Instance.Shoot = true;
+#if Debug
+                Debug.Log("Mouse0(Left mouse).");
+#endif
+            }
+            else
+            {
+                VirtualInputManager.Instance.Shoot = false;
+            }
+
+            if (Input.GetButton("Reload"))
+            {
+                VirtualInputManager.Instance.Reload = true;
+#if Debug
+                Debug.Log("Reload.");
+#endif
+            }
+            else
+            {
+                VirtualInputManager.Instance.Reload = false;
+            }
         }
     }
 }
