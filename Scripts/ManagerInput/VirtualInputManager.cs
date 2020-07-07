@@ -1,6 +1,4 @@
-﻿using UnknownFPSGame.GeneralScripts;
-
-namespace UnknownFPSGame.ManagerInput
+﻿namespace UnknownFPSGame.Scripts.ManagerInput
 {
     public class VirtualInputManager : Singleton<VirtualInputManager>
     {

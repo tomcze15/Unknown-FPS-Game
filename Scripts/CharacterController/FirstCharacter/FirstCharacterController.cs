@@ -5,8 +5,9 @@
 
 using System;
 using UnityEngine;
+using UnknownFPSGame.Scripts.Weapon;
 
-namespace UnknownFPSGame.CharacterController.FirstPerson
+namespace UnknownFPSGame.Scripts.CharacterController.FirstPerson
 {
     [RequireComponent(typeof(UnityEngine.CharacterController))]
     public class FirstCharacterController : MonoBehaviour
@@ -61,7 +62,7 @@ namespace UnknownFPSGame.CharacterController.FirstPerson
         [SerializeField] LayerMask  GroundMask                  = 0;
 
         private Vector3     _curve;
-        private Vector3     _moveForce;
+        [SerializeField]  private Vector3     _moveForce;
         private Vector3     _slopeDirection;
         private GameObject  _currentHitObj;
         private float       _curretnHitDistance;
@@ -72,21 +73,6 @@ namespace UnknownFPSGame.CharacterController.FirstPerson
             if (!CharacterController)
                 CharacterController = this.GetComponent<UnityEngine.CharacterController>();
         }
-
-
-
-        // Test ///////////////////////////
-
-        public Gun _gun;
-
-        private void Update()
-        {
-            if(advancedSettings.isShoot)
-            {
-                _gun.Shoot();
-            }
-        }
-        //////////////////////////////////
 
         private void FixedUpdate()
         {
@@ -113,7 +99,19 @@ namespace UnknownFPSGame.CharacterController.FirstPerson
 
         private void UpdateDirectionalMove()
         {
-            _moveForce = this.transform.right * movementSettings.Horizontal + this.transform.forward * movementSettings.Vertical * movementSettings.Speed;
+            if (movementSettings.MoveForward && movementSettings.MoveBack || movementSettings.MoveLeft && movementSettings.MoveRight)
+            {
+                _moveForce = Vector3.zero;
+                return;
+            }
+
+            _moveForce = (this.transform.right * movementSettings.Horizontal + this.transform.forward * movementSettings.Vertical) * movementSettings.Speed;
+
+            //if ((movementSettings.MoveForward || movementSettings.MoveBack) && (movementSettings.MoveLeft || movementSettings.MoveRight))
+            //{
+            //    _moveForce.x *= 0.5f;
+            //    _moveForce.z *= 0.5f;
+            //}
 
             if (movementSettings.Run)
                 _moveForce *= movementSettings.RunMultiplier;
@@ -172,11 +170,6 @@ namespace UnknownFPSGame.CharacterController.FirstPerson
 
         private float SlopeMultiplier()
             => movementSettings.SlopeCurveModifier.Evaluate(advancedSettings.AngleSlope);
-
-        private void Shoot()
-        { 
-
-        }
 
         private void OnDrawGizmosSelected()
         {

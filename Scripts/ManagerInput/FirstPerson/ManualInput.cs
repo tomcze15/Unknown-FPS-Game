@@ -1,7 +1,7 @@
-﻿using UnknownFPSGame.ManagerInput;
-using UnityEngine;
+﻿using UnityEngine;
+using UnknownFPSGame.Scripts.ManagerInput;
 
-namespace UnknownFPSGame.CharacterController.FirstPerson
+namespace UnknownFPSGame.Scripts.CharacterController.FirstPerson
 {
     public class ManualInput : MonoBehaviour
     {

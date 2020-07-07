@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace UnknownFPSGame.GeneralScripts
+namespace UnknownFPSGame.Scripts
 {
     public class GameManager : MonoBehaviour
     {

@@ -112,9 +112,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d305d06086b62847a4cbcf34aa8e10e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 0
+  damage: 25
   Rigidbody: {fileID: -6701852629569173139}
-  Speed: 1000
+  Speed: 2000
 --- !u!114 &1054256790129831989
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -122,12 +122,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 499843566480796679}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d766951ba732bf34ab6849cfeeb62d2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Second: 3
+  Second: 5
 --- !u!96 &8199027163025582963
 TrailRenderer:
   serializedVersion: 2
@@ -185,7 +185,7 @@ TrailRenderer:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1
+        time: 0.1
         value: 0
         inSlope: 0
         outSlope: 0

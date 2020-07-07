@@ -1,5 +1,98 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1638218019
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1638218020}
+  - component: {fileID: 1638218023}
+  - component: {fileID: 1638218022}
+  - component: {fileID: 1638218021}
+  m_Layer: 9
+  m_Name: helper direction shot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1638218020
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1638218019}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 40.029995}
+  m_LocalScale: {x: 0.10000001, y: 0.1, z: 80.19001}
+  m_Children: []
+  m_Father: {fileID: 5997810206450528026}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &1638218023
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1638218019}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &1638218022
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1638218019}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!65 &1638218021
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1638218019}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &305022495629076052
 GameObject:
   m_ObjectHideFlags: 0
@@ -11,7 +104,7 @@ GameObject:
   - component: {fileID: 5586385410052422639}
   - component: {fileID: 3829797954427680667}
   - component: {fileID: 2551914618712878698}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Handle_Detail_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88,7 +181,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 886006076999039297}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Front
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -120,7 +213,7 @@ GameObject:
   - component: {fileID: 7400467306493998827}
   - component: {fileID: 5722216421313315514}
   - component: {fileID: 1832164414501093096}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Release
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -199,7 +292,7 @@ GameObject:
   - component: {fileID: 8001384696035662568}
   - component: {fileID: 593177214136624447}
   - component: {fileID: 562468756271970953}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -278,7 +371,7 @@ GameObject:
   - component: {fileID: 1404381686242036518}
   - component: {fileID: 1994068968566091627}
   - component: {fileID: 152832397270296510}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Burrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -356,8 +449,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5997810206450528026}
-  - component: {fileID: 2837613612859760787}
-  m_Layer: 0
+  - component: {fileID: 1694354698377815598}
+  m_Layer: 9
   m_Name: Glock_prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -385,10 +478,11 @@ Transform:
   - {fileID: 1292415384679854521}
   - {fileID: 7400467306493998827}
   - {fileID: 90801893232206039}
+  - {fileID: 1638218020}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2837613612859760787
+--- !u!114 &1694354698377815598
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -397,15 +491,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 6374651992488441248}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dffdce85e71344f459362bbf089dda3f, type: 3}
+  m_Script: {fileID: 11500000, guid: 1c6eb48be5bd76146ae535fc1c95e387, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Bullet: {fileID: 0}
+  _fireRate: 0.3
+  _damage: 0
+  BulletPrefab: {fileID: 499843566480796679, guid: 8081c568e1d61e642996395903a3805e,
+    type: 3}
   Burrel: {fileID: 2600170446399038556}
-  FireRate: 0.3
-  NextTimeToFire: 0
-  CurrentBullet: 0
-  MaxBullet: 17
+  CurrentAmmo: 0
+  MaxAmmo: 99999
 --- !u!1 &6593141678650552657
 GameObject:
   m_ObjectHideFlags: 0
@@ -417,7 +512,7 @@ GameObject:
   - component: {fileID: 5241915684307901489}
   - component: {fileID: 8046661394933468343}
   - component: {fileID: 2464225077852087791}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ChamberLock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -496,7 +591,7 @@ GameObject:
   - component: {fileID: 1592035543452356544}
   - component: {fileID: 4424815703299915616}
   - component: {fileID: 7737536667280359106}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Handle_Detail_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -573,7 +668,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 90801893232206039}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Side
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -605,7 +700,7 @@ GameObject:
   - component: {fileID: 5548936703727818971}
   - component: {fileID: 3117174654017508724}
   - component: {fileID: 4308878485873685278}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -682,7 +777,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2600170446399038556}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BulletCreator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -697,7 +792,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8446270444713309714}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.0082, z: -0.00058}
+  m_LocalPosition: {x: 0, y: -0.00857, z: -0.00058}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1404381686242036518}
@@ -714,7 +809,7 @@ GameObject:
   - component: {fileID: 1292415384679854521}
   - component: {fileID: 5306302357797369144}
   - component: {fileID: 2028940916633280438}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Magazine
   m_TagString: Untagged
   m_Icon: {fileID: 0}

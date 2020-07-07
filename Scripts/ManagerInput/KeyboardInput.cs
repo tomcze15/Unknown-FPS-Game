@@ -1,7 +1,7 @@
 ﻿//#define Debug
 using UnityEngine;
 
-namespace UnknownFPSGame.ManagerInput
+namespace UnknownFPSGame.Scripts.ManagerInput
 {
     public class KeyboardInput : MonoBehaviour
     {

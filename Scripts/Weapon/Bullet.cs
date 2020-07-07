@@ -1,12 +1,13 @@
 ﻿using UnityEngine;
+using UnknownFPSGame.Scripts.Enemy;
 
-namespace UnknownFPSGame.GeneralScripts
+namespace UnknownFPSGame.Scripts.Weapon
 {
     public class Bullet : MonoBehaviour
     {
         [Range(0.0f, 100.0f)] public float damage;
         [SerializeField] Rigidbody Rigidbody;
-        [SerializeField] float Speed;
+        [SerializeField] float Speed = 0;
 
         private void Start()
         {
@@ -18,7 +19,12 @@ namespace UnknownFPSGame.GeneralScripts
 
         private void OnCollisionEnter(Collision collision)
         {
-            collision.gameObject.SetActive(false);
+            EnemyControl enemyControl = collision.gameObject.GetComponent<EnemyControl>();
+            if (enemyControl)
+                enemyControl.TakeDamage(damage);
+            else 
+                Debug.Log("I didn't hit the enemy.");
+
             Destroy(this.gameObject);
         }
     }
