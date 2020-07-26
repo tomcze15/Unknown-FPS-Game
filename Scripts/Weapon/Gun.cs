@@ -5,7 +5,7 @@ namespace UnknownFPSGame.Scripts.Weapon
     public abstract class Gun : Weapon
     {
         [SerializeField] protected GameObject   BulletPrefab;
-        [SerializeField] protected Transform    Burrel;
+        [SerializeField] protected Transform    Barrel;
         [SerializeField] protected int          CurrentAmmo;
         [SerializeField] protected int          MaxAmmo; // MaxAmmo
 
